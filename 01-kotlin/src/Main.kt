@@ -130,6 +130,7 @@ fun main(args: Array<String>){
 
     println(totalTazos)
 
+    val numerito = Numero("1");
 
 }
 
@@ -165,5 +166,124 @@ fun holaMundoAvanzado(mensaje:Any):Unit {
 fun sumarDosNumeros(numUno:Int, numDos:Int):Int{
     return numUno+numDos
 }
+
+/*
+------------------------------------------------------------------
+-------------------------Clases-----------------------------------
+------------------------------------------------------------------
+ */
+
+class Usuario(val cedula:String){
+    public var nombre:String = ""
+    public var apellido:String = ""
+
+
+    constructor(cedulaM:String, apellido:String):this(cedulaM){
+        this.apellido = apellido
+    }
+
+}
+
+class UsuarioKT(public val nombre:String,
+                public val apellido:String,
+                private var id:Int
+                //,protected var id: Int
+                ){
+
+    public fun hola():String{
+        return this.apellido
+    }
+
+    init{
+
+    }
+
+    companion object {
+        val gravedad = 10.5;
+        fun correr(){
+            println("estoy corriendo en $gravedad")
+        }
+    }
+
+}
+
+fun a() {
+    val jose = UsuarioKT("jose", "murillo", 7198)
+    println(jose.nombre)
+
+    val jose2 = Usuario("a")
+    jose2.nombre = " "
+    jose2.apellido = " "
+}
+
+class Numero(var numero:Int){
+    constructor(numeroString:String) : this(numeroString.toInt()) {
+        println("Constructor")
+    }
+
+    init{
+        println("init")
+    }
+}
+
+fun aa(){
+    UsuarioKT.gravedad;
+    UsuarioKT.correr();
+    Numero(5);
+}
+
+abstract class Numeros (var numeroUno : Int, var numeroDos : Int){
+
+}
+
+class Suma(numeroUnos:Int, numeroDoss:Int) : Numeros(numeroUnos,numeroDos){
+
+}
+
+fun cc(){
+    val a = Suma(1, 2)
+    //Clase abstracta
+    //val b = Numeros(1,2)
+
+}
+
+
+
+
+fun presley(requerido:Int,
+            opcional:Int=1, //Parametro opcional
+            nulo:UsuarioKT?       //A veces va a ser nulo
+            ){
+
+    if(nulo!=null){
+        nulo.nombre
+    }
+
+    val nombresito = nulo?.nombre.toString(); //Elvis operator
+
+    nulo!!.nombre //Sé que existirá! solo hazlo!
+}
+
+fun cd(){
+    presley(requerido = 1, nulo = 0)
+    presley (1,1,0)
+    presley(1,1,null)
+    presley(null,1,2)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
