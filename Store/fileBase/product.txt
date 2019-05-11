@@ -1,0 +1,1 @@
+1,Consumible,Manzana,Fruta,0.30
