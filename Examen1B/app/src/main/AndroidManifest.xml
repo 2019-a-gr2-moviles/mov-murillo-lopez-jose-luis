@@ -9,10 +9,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ManageFoodDataActivity">
+        </activity>
         <activity
                 android:name=".ManageFoodActivity"
-                android:label="@string/title_activity_manage_food"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:launchMode="singleTask">
         </activity>
         <activity
                 android:name=".FoodActivity"

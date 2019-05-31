@@ -4,5 +4,14 @@
     <string name="logInBtn">Entrar</string>
     <string name="createFood">Crear comida</string>
     <string name="manageFood">Gestionar comida</string>
-    <string name="title_activity_manage_food">ManageFoodActivity</string>
+    <string name="foodName">Nombre</string>
+    <string name="foodDescription">Descripción</string>
+    <string name="foodCountry">Nacionalidad</string>
+    <string name="numberPeople">Número de personas</string>
+    <string name="hotSpicy">Picante</string>
+    <string name="saveButton">Guardar</string>
+    <string name="deleteButton">Eliminar</string>
+    <string name="updateButton">Actualizar</string>
+    <string name="newIngredientButton">Crear ingrediente</string>
+    <string name="manageIngredientsButton">Gestionar Ingredientes</string>
 </resources>

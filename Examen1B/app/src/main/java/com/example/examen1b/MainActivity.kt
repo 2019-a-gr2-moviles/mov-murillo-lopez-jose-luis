@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun logIn(){
-        User.nombre = user_input.text.toString()
+        User.name = user_input.text.toString()
         val intent = Intent(
             this,
             FoodActivity::class.java
