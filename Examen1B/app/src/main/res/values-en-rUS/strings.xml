@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test1B</string>
+    <string name="createFood">Create food</string>
+    <string name="logInBtn">Enter</string>
+    <string name="manageFood">Manage food</string>
+    <string name="textInputHint">User name</string>
+</resources>

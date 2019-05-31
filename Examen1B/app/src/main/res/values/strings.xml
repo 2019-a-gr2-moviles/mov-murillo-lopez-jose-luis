@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Examen1B</string>
+    <string name="textInputHint">Nombre de Usuario</string>
+    <string name="logInBtn">Entrar</string>
+    <string name="createFood">Crear comida</string>
+    <string name="manageFood">Gestionar comida</string>
+    <string name="title_activity_manage_food">ManageFoodActivity</string>
+</resources>
