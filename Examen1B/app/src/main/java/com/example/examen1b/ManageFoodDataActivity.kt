@@ -21,8 +21,11 @@ class ManageFoodDataActivity : AppCompatActivity() {
             updateFood(n)
             Snackbar.make(it, "${User.name} ${getString(R.string.updateFoodSnack)}", Snackbar.LENGTH_LONG).show()
         }
-        btn_new_ingredient.setOnClickListener {
+        btn_update_ingredient.setOnClickListener {
             goToNewIngredient(n)
+        }
+        btn_ingredients_management.setOnClickListener {
+            goToIngredientManagement(n)
         }
     }
 
@@ -56,6 +59,16 @@ class ManageFoodDataActivity : AppCompatActivity() {
         val intent = Intent(
             this,
             AddIngredientActivity :: class.java
+        )
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.putExtra("foodID", from)
+        startActivity(intent)
+    }
+
+    fun goToIngredientManagement(from: Int){
+        val intent = Intent(
+            this,
+            ManageIngredientsActivity :: class.java
         )
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("foodID", from)

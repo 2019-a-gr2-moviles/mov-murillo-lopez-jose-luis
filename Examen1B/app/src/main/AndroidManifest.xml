@@ -9,9 +9,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ManageIngredientsActivity">
+        <activity android:name=".ManageIngredientsDataActivity"
+                  android:launchMode="singleTask">
         </activity>
-        <activity android:name=".AddIngredientActivity">
+        <activity android:name=".ManageIngredientsActivity"
+                  android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".AddIngredientActivity"
+                  android:launchMode="singleTask">
         </activity>
         <activity
                 android:name=".ManageFoodDataActivity"
