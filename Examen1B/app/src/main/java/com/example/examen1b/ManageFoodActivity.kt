@@ -13,22 +13,19 @@ class ManageFoodActivity : AppCompatActivity() {
 
     private val namesList = arrayListOf<String>()
 
+    override fun onResume() {
+        super.onResume()
+        val n = intent.getIntExtra("forSnack",0)
+        when (n) {
+            2 -> Snackbar.make(manage_layout, "${User.name} ${getString(R.string.deleteFoodSnack)}", Snackbar.LENGTH_LONG).show()
+            3 -> Snackbar.make(manage_layout, "${User.name} ${getString(R.string.updateFoodSnack)}", Snackbar.LENGTH_LONG).show()
+        }
+        initList()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage_food)
-        initList()
-
-        val adapter = ArrayAdapter(
-            this,
-            android.R.layout.simple_list_item_1,
-            namesList
-        )
-
-        lv_food.adapter = adapter
-
-        lv_food.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            goToFoodDetail(position)
-        }
     }
 
     fun goToFoodDetail(position : Int){
@@ -42,15 +39,22 @@ class ManageFoodActivity : AppCompatActivity() {
     }
 
     fun initList(){
-        Food.foodList.add(Food("Encebollado","Sopa de cebolla", "Ecuador",1, false))
-        Food.foodList.add(Food("Pie floater","Pastel de carne flotante", "Australia",1, false))
-        Food.foodList.add(Food("Asado","Asados de carne", "Argentina",5, false))
-        Food.foodList.add(Food("Cangrejo al chili","Comida de marisco", "Singapur",2, true))
-        Food.foodList.add(Food("Jamón de Parma","Jamón crudo", "Italia",1, false))
-        Food.foodList.add(Food("Goi cuon","Rollitos", "Vietnam",2, true))
-
+        namesList.clear()
         Food.foodList.forEach {
             namesList.add(it.foodName)
+        }
+        refreshList()
+    }
+
+    fun refreshList(){
+        val adapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_1,
+            namesList
+        )
+        lv_food.adapter = adapter
+        lv_food.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            goToFoodDetail(position)
         }
     }
 }
