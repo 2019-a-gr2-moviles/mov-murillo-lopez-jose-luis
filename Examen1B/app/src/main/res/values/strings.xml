@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Comida</string>
+    <string name="textInputHint">Nombre de Usuario</string>
+    <string name="logInBtn">Entrar</string>
+    <string name="createFood">Crear comida</string>
+    <string name="manageFood">Gestionar comida</string>
+    <string name="foodName">Nombre</string>
+    <string name="foodDescription">Descripción</string>
+    <string name="foodCountry">Nacionalidad</string>
+    <string name="numberPeople">Número de personas</string>
+    <string name="hotSpicy">Picante</string>
+    <string name="saveButton">Guardar</string>
+    <string name="deleteButton">Eliminar</string>
+    <string name="updateButton">Actualizar</string>
+    <string name="newIngredientButton">Crear ingrediente</string>
+    <string name="manageIngredientsButton">Gestionar ingredientes</string>
+    <string name="newFoodButton">Guardar</string>
+    <string name="deleteFoodSnack">ha eliminado un plato.</string>
+    <string name="insertFoodSnack">ha insertado un plato.</string>
+    <string name="updateFoodSnack">ha actualizado un plato.</string>
+    <string name="quantity">Cantidad</string>
+    <string name="ingredientDescription">Descripción de la preparación</string>
+    <string name="optional">Opcional</string>
+    <string name="ingredientType">Tipo de ingrediente</string>
+    <string name="ingredientCool">Necesita refrigeración</string>
+    <string name="insertIngredientSnack">ha insertado un ingrediente.</string>
+    <string name="deleteIngredientSnack">ha eliminado un ingrediente.</string>
+    <string name="updateIngredientSnack">ha actualizado un ingrediente.</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Food</string>
+    <string name="createFood">Create food</string>
+    <string name="logInBtn">Enter</string>
+    <string name="manageFood">Manage food</string>
+    <string name="textInputHint">User name</string>
+    <string name="deleteButton">Delete</string>
+    <string name="deleteFoodSnack">has removed a plate.</string>
+    <string name="deleteIngredientSnack">has removed an ingredient.</string>
+    <string name="foodCountry">Nationality</string>
+    <string name="foodDescription">Description</string>
+    <string name="foodName">Name</string>
+    <string name="hotSpicy">Hot spicy</string>
+    <string name="ingredientCool">Need cooling</string>
+    <string name="ingredientDescription">Preparation description</string>
+    <string name="ingredientType">Ingredient type</string>
+    <string name="insertFoodSnack">has inserted a plate.</string>
+    <string name="insertIngredientSnack">has inserted an ingredient.</string>
+    <string name="manageIngredientsButton">Manage ingredients</string>
+    <string name="newFoodButton">Save</string>
+    <string name="newIngredientButton">Create ingredient</string>
+    <string name="numberPeople">Number of people</string>
+    <string name="optional">Optional</string>
+    <string name="quantity">Quantity</string>
+    <string name="saveButton">Save</string>
+    <string name="updateButton">Update</string>
+    <string name="updateFoodSnack">has updated a plate</string>
+    <string name="updateIngredientSnack">has updated an ingredient</string>
+</resources>
