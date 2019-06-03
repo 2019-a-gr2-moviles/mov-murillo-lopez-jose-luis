@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ManageFoodDataActivity">
+        tools:context=".ManageFoodDataActivity" android:background="@drawable/food">
 
     <Button
             android:text="@string/manageIngredientsButton"
@@ -14,7 +14,7 @@
             android:id="@+id/btn_ingredients_management"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
             android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/btn_delete_food"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    />
     <Button
             android:text="@string/newIngredientButton"
             android:layout_width="125dp"
@@ -23,14 +23,14 @@
             app:layout_constraintStart_toEndOf="@+id/btn_delete_food" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
             app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/btn_update_food" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_update_food"
+            android:scrollbars="horizontal|vertical"/>
     <Button
             android:text="@string/deleteButton"
             android:layout_width="125dp"
             android:layout_height="78dp"
             android:id="@+id/btn_delete_food"
-            app:layout_constraintTop_toBottomOf="@+id/food_number_input" android:layout_marginTop="56dp"
+            app:layout_constraintTop_toBottomOf="@+id/food_number_input" android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"/>
     <android.support.design.widget.TextInputLayout
             android:layout_width="281dp"
@@ -98,7 +98,7 @@
             android:layout_width="125dp"
             android:layout_height="78dp"
             android:id="@+id/btn_update_food"
-            app:layout_constraintTop_toBottomOf="@+id/food_number_input" android:layout_marginTop="56dp"
+            app:layout_constraintTop_toBottomOf="@+id/food_number_input" android:layout_marginTop="24dp"
             app:layout_constraintStart_toEndOf="@+id/btn_delete_food" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
             app:layout_constraintHorizontal_bias="1.0"/>
