@@ -15,12 +15,24 @@ class MainActivity : AppCompatActivity() {
             irARecycler()
         }
 
+        btn_intent.setOnClickListener {
+            irAIntentRespuesta()
+        }
+
     }
 
     fun irARecycler(){
         val intent = Intent(
             this,
             RecyclerViewActivity :: class.java
+        )
+        startActivity(intent)
+    }
+
+    fun irAIntentRespuesta(){
+        val intent = Intent(
+            this,
+            IntentRespuestaActivity :: class.java
         )
         startActivity(intent)
     }
