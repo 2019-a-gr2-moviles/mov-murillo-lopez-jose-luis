@@ -52,9 +52,16 @@ module.exports = {
     correo : {
       type : 'string',
       isEmail : true
+    },
+    serviciosDeUsuario : {
+      collection : 'servicio',
+      via : 'fkUsuario'
+    },
+    fkEmpresa : {
+      model : 'empresa'
     }
 
-  },
+  }
 
 };
 
