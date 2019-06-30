@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
             irAIntentRespuesta()
         }
 
+        btn_http.setOnClickListener {
+            irAConexionHttp()
+        }
+
     }
 
     fun irARecycler(){
@@ -33,6 +37,14 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(
             this,
             IntentRespuestaActivity :: class.java
+        )
+        startActivity(intent)
+    }
+
+    fun irAConexionHttp(){
+        val intent = Intent(
+            this,
+            ConexionHttpActivity :: class.java
         )
         startActivity(intent)
     }

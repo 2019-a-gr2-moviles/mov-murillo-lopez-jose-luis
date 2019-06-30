@@ -29,5 +29,12 @@
             android:id="@+id/btn_intent" app:layout_constraintEnd_toEndOf="@+id/btn_recycler"
             app:layout_constraintStart_toStartOf="@+id/btn_recycler" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/btn_recycler"/>
+    <Button
+            android:text="Ir a conexión"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_http" app:layout_constraintEnd_toEndOf="@+id/btn_intent"
+            app:layout_constraintStart_toStartOf="@+id/btn_intent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_intent"/>
 
 </android.support.constraint.ConstraintLayout>
