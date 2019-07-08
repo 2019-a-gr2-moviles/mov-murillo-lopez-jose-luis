@@ -1,10 +1,10 @@
 package com.example.app2b
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 
 class RecyclerViewActivity : AppCompatActivity() {
@@ -25,15 +25,15 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     }
 
-    fun iniciarRecyclerView(lista : ArrayList<Persona>, actividad: RecyclerViewActivity, recycler_view: RecyclerView){
+    fun iniciarRecyclerView(lista : ArrayList<Persona>, actividad: RecyclerViewActivity, recycler_view: androidx.recyclerview.widget.RecyclerView){
         val adaptadorPersona = AdaptadorPersona(
             lista,
             actividad,
             recycler_view
         )
         recycler_view.adapter = adaptadorPersona
-        recycler_view.itemAnimator = DefaultItemAnimator()
-        recycler_view.layoutManager = LinearLayoutManager(actividad)
+        recycler_view.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        recycler_view.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(actividad)
 
         adaptadorPersona.notifyDataSetChanged()
     }
