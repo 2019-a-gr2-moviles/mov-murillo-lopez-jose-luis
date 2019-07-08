@@ -1,10 +1,11 @@
 package com.example.app2b
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.result.Result
 import java.lang.Exception
 import java.util.*
@@ -73,6 +74,29 @@ class ConexionHttpActivity : AppCompatActivity() {
                     }
                 }
             }
+
+        val urlCrearEmpresa = "http://192.168.0.12:1337/Empresa"
+
+        val parametrosCrearEmpresa = listOf(
+            "nombre" to "Manticore Labs2"
+        )
+
+        urlCrearEmpresa
+            .httpPost(parametrosCrearEmpresa)
+            .responseString { request, response, result ->
+                when(result){
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http", "Error: ${ex.message}")
+                    }
+                    is Result.Success -> {
+                        val data = result.get()
+                        Log.i("http", "Data: $data")
+                    }
+                }
+            }
+        //De buffer a imagen
+
 
     }
 }
