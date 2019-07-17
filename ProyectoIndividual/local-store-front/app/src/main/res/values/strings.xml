@@ -20,4 +20,8 @@
     <string name="bills">Facturas</string>
     <string name="navigation_drawer_open">Barra lateral abierta</string>
     <string name="navigation_drawer_close">Barra lateral cerrada</string>
+    <string name="welcomeMsg">Bienvenido, \n</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -8,4 +8,6 @@
     <color name="white">#FFFFFF</color>
     <color name="darkPurple">#35012C</color>
     <color name="darkSkyBlue">#8FBFE0</color>
+    <color name="smokyBlack">#11001C</color>
+    <color name="trolleyGray">#818479</color>
 </resources>
