@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.localstore.R
 import com.example.localstore.model.Product
@@ -30,6 +31,10 @@ class ProductAdapter
         p0.productType.text = product.type
         p0.productPrice.text = "$ ${product.price}"
         Glide.with(context).load(product.image).into(p0.productImage)
+        p0.addProduct.setOnClickListener {
+            ShopCart.insertIntoShopCart(product)
+            Toast.makeText(context.context, "${product.name} agregado al carrito", Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
@@ -38,10 +43,10 @@ class ProductAdapter
             p0,
             false
         )
-        return MyViewHolder(itemView, p1)
+        return MyViewHolder(itemView)
     }
 
-    inner class MyViewHolder (view : View, p1 : Int) : RecyclerView.ViewHolder(view) {
+    inner class MyViewHolder (view : View) : RecyclerView.ViewHolder(view) {
 
         var productName : TextView
         var productType : TextView
@@ -57,9 +62,6 @@ class ProductAdapter
             productImage = view.findViewById(R.id.iv_product_image)
             addProduct = view.findViewById(R.id.iv_add)
 
-            addProduct.setOnClickListener {
-                ShopCart.shoppingCart.add(productsList[p1])
-            }
 
         }
 

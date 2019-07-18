@@ -45,8 +45,8 @@
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_totalCost" app:layout_constraintStart_toEndOf="@+id/tv_product_name"
-            android:layout_marginStart="32dp"
+            android:id="@+id/tv_totalCost"
             android:textSize="24sp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="74dp"
-            android:textColor="@color/smokyBlack" android:textStyle="bold"/>
+            android:textColor="@color/smokyBlack" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"/>
 </android.support.constraint.ConstraintLayout>

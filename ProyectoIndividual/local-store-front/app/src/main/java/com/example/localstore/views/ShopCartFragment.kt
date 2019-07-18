@@ -4,13 +4,20 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import com.example.localstore.R
+import com.example.localstore.adapter.ProductAdapter
+import com.example.localstore.adapter.ShopCartAdapter
+import com.example.localstore.model.Product
 import com.example.localstore.model.ShopCart
+import kotlinx.android.synthetic.main.fragment_shop_cart.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +41,21 @@ class ShopCartFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        Log.i("testingxd", "${ShopCart.shoppingCart[0].name}")
+        iniciarRecyclerVirew(ShopCart.shoppingCart, this, rv_shop_cart)
+        tv_shop_cart_total.text = "${tv_shop_cart_total.text}${ShopCart.calculatePrice()}"
+    }
+
+    fun iniciarRecyclerVirew (lista : ArrayList<Product>, actividad: ShopCartFragment, recyclerView: RecyclerView){
+        val adaptadorProducto = ShopCartAdapter(
+            lista,
+            actividad,
+            recyclerView
+        )
+        recyclerView.adapter = adaptadorProducto
+        recyclerView.itemAnimator = DefaultItemAnimator()
+        recyclerView.layoutManager = LinearLayoutManager(actividad.context)
+
+        adaptadorProducto.notifyDataSetChanged()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
