@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
 import com.example.localstore.R
+import com.example.localstore.model.Bill
 import com.example.localstore.model.Product
 
 class HomeActivity : AppCompatActivity(),
@@ -66,6 +67,7 @@ class HomeActivity : AppCompatActivity(),
         }
 
         Product.adapter.getAll()
+        Bill.adapter.getAll()
 
     }
 

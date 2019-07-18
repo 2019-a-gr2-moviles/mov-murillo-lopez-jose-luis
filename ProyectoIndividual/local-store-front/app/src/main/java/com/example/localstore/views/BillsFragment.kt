@@ -4,11 +4,19 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import com.example.localstore.R
+import com.example.localstore.adapter.BillAdapter
+import com.example.localstore.adapter.ProductAdapter
+import com.example.localstore.model.Bill
+import com.example.localstore.model.Product
+import kotlinx.android.synthetic.main.fragment_bills.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +44,24 @@ class BillsFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        iniciarRecyclerVirew(Bill.allBills, this, rv_bill)
+    }
+
+    fun iniciarRecyclerVirew (lista : ArrayList<Bill>, actividad: BillsFragment, recyclerView: RecyclerView){
+        val adaptadorProducto = BillAdapter(
+            lista,
+            actividad,
+            recyclerView
+        )
+        recyclerView.adapter = adaptadorProducto
+        recyclerView.itemAnimator = DefaultItemAnimator()
+        recyclerView.layoutManager = LinearLayoutManager(actividad.context)
+
+        adaptadorProducto.notifyDataSetChanged()
     }
 
     override fun onCreateView(

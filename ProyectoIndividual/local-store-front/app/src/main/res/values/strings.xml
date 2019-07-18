@@ -21,6 +21,7 @@
     <string name="navigation_drawer_open">Barra lateral abierta</string>
     <string name="navigation_drawer_close">Barra lateral cerrada</string>
     <string name="welcomeMsg">Bienvenido, \n</string>
+    <string name="billsNo">Factura </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

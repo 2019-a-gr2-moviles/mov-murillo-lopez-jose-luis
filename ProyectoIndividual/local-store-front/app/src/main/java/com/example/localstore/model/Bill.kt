@@ -1,5 +1,7 @@
 package com.example.localstore.model
 
+import com.example.localstore.adapter.BillAdapter
+import com.example.localstore.adapter.BillHttpAdapter
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -14,6 +16,7 @@ class Bill(
 
     companion object{
         var allBills = arrayListOf<Bill>()
+        var adapter = BillHttpAdapter()
     }
 
 }

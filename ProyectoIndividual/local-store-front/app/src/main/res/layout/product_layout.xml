@@ -10,7 +10,8 @@
             android:layout_height="wrap_content" app:srcCompat="@drawable/ic_add"
             android:id="@+id/iv_add" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp" android:layout_marginTop="64dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="64dp"/>
     <ImageView
             android:layout_width="106dp"
             android:layout_height="106dp" app:srcCompat="@drawable/logo"

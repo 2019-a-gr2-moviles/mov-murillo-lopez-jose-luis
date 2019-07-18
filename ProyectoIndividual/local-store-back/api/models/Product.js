@@ -28,6 +28,9 @@ module.exports = {
     bills : {
       collection : 'billProduct',
       via : 'product_FK'
+    },
+    productPicFD : {
+      type : 'string'
     }
 
   },
