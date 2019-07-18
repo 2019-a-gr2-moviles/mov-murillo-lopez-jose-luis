@@ -26,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
         var userName = input_user.text.toString()
         var password = input_pass.text.toString()
         if(User.login(userName,password) != null){
-            Client.adapter.getClient(User.currentUser!!.id)
             goToHomeActivity()
         }
     }

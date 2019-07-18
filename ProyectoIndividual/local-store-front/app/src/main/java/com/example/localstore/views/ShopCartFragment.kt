@@ -42,6 +42,10 @@ class ShopCartFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         iniciarRecyclerVirew(ShopCart.shoppingCart, this, rv_shop_cart)
+        updatePrice()
+    }
+
+    fun updatePrice(){
         tv_shop_cart_total.text = "${tv_shop_cart_total.text}${ShopCart.calculatePrice()}"
     }
 

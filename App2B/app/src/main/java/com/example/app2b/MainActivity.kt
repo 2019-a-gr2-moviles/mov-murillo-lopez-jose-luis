@@ -27,6 +27,30 @@ class MainActivity : AppCompatActivity() {
             irAMapas()
         }
 
+        btn_cilo_vida.setOnClickListener {
+            irACiclo()
+        }
+
+        btn_fragmentos.setOnClickListener {
+            irAFragmentos()
+        }
+
+    }
+
+    fun irAFragmentos(){
+        val intent = Intent (
+            this,
+            FragmentosActivity :: class.java
+        )
+        startActivity(intent)
+    }
+
+    fun irACiclo(){
+        val intent = Intent(
+            this,
+            CiclioVidaActivity :: class.java
+        )
+        startActivity(intent)
     }
 
     fun irAMapas(){

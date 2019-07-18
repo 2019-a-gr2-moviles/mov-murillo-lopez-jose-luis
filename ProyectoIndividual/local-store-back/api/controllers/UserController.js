@@ -17,10 +17,8 @@ module.exports = {
                     if(user[0].password == passParam){
                         var response = {
                             id : user[0].id,
-                            userName : user[0].userName,
-                            user_person_FK : user[0].user_person_FK
+                            userName : user[0].userName
                         }
-                        response.populate(user_person_FK)
                         return res.ok(
                             response
                         )

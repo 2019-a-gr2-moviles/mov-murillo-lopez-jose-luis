@@ -38,6 +38,19 @@ class ShopCart {
             return totalPrice
         }
 
+        fun deleteFromCart(product : Product) : Int{
+            var toReturn = 0
+            if(cartCount[product.id] == 1){
+                shoppingCart.remove(product)
+                cartCount.remove(product.id)
+            }else{
+                var num: Int = cartCount[product.id]!!
+                cartCount[product.id] = num - 1
+                toReturn =1
+            }
+            return toReturn
+        }
+
     }
 
 }

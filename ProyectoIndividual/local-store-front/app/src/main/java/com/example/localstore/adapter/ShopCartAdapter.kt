@@ -43,6 +43,18 @@ class ShopCartAdapter
         var totalCost = productQuantity * product.price
         p0.productTotalCost.text = "$ $totalCost"
         Glide.with(context).load(product.image).into(p0.productImage)
+        p0.deleteProduct.setOnClickListener {
+            var handler = ShopCart.deleteFromCart(product)
+            if(handler == 0){
+                context.iniciarRecyclerVirew(ShopCart.shoppingCart, context, recyclerView)
+            }else{
+                var productQuantity = ShopCart.cartCount[product.id]!!
+                p0.productQuantity.text = "$productQuantity"
+                var totalCost = productQuantity * product.price
+                p0.productTotalCost.text = "$ $totalCost"
+            }
+            context.updatePrice()
+        }
     }
 
     inner class MyViewHolder (view : View, p1 : Int) : RecyclerView.ViewHolder(view) {
@@ -52,6 +64,7 @@ class ShopCartAdapter
         var productQuantity : TextView
         var productTotalCost : TextView
         var productImage : ImageView
+        var deleteProduct : ImageView
 
         init {
 
@@ -60,6 +73,7 @@ class ShopCartAdapter
             productQuantity = view.findViewById(R.id.tv_product_qtty)
             productTotalCost = view.findViewById(R.id.tv_totalCost)
             productImage = view.findViewById(R.id.iv_product)
+            deleteProduct = view.findViewById(R.id.iv_remove)
         }
     }
 }
