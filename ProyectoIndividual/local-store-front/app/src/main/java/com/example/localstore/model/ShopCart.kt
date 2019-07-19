@@ -1,5 +1,7 @@
 package com.example.localstore.model
 
+import com.example.localstore.adapter.BillAdapter
+import com.example.localstore.adapter.BillHttpAdapter
 import com.example.localstore.adapter.ProductHttpAdapter
 import java.lang.Math.round
 import java.time.LocalDateTime
@@ -10,7 +12,8 @@ class ShopCart {
     companion object{
         var shoppingCart = arrayListOf<Product>()
         var cartCount = mutableMapOf<Int, Int>()
-        var adapter = ProductHttpAdapter()
+        var adapter = BillHttpAdapter()
+
 
         fun existsOnCart(id : Int) : Int {
             var count : Int = 0
@@ -55,18 +58,7 @@ class ShopCart {
         }
 
         fun buy(){
-            var body = listOf(
-                "date" to Date().toString(),
-                "totalCost" to calculatePrice().toString(),
-                "client_bill_FK" to Client.currentClient!!.id
-            )
-            Bill.adapter.newBill(body)
-            shoppingCart.forEach {
-                var productBody = listOf(
-                    "quantity" to cartCount[it.id],
-                    "product" to it.id
-                )
-            }
+            adapter.execute().get()
         }
 
     }

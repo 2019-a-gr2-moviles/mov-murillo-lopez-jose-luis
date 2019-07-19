@@ -7,12 +7,12 @@ import kotlin.collections.ArrayList
 
 class Bill(
     var id : Int,
-    var date : Date,
-    var totalCost : Double,
-    var products : ArrayList<Product>
+    var date : String,
+    var totalCost : Double
 )
 {
 
+    var productsList : ArrayList<Product> = arrayListOf()
 
     companion object{
         var allBills = arrayListOf<Bill>()
