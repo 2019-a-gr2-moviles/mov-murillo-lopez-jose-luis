@@ -1,6 +1,9 @@
 package com.example.localstore.model
 
 import com.example.localstore.adapter.ProductHttpAdapter
+import java.lang.Math.round
+import java.time.LocalDateTime
+import java.util.*
 
 class ShopCart {
 
@@ -35,7 +38,7 @@ class ShopCart {
             shoppingCart.forEach {
                 totalPrice += (it.price * cartCount[it.id]!!)
             }
-            return totalPrice
+            return (round(totalPrice * 100) / 100).toDouble()
         }
 
         fun deleteFromCart(product : Product) : Int{
@@ -49,6 +52,21 @@ class ShopCart {
                 toReturn =1
             }
             return toReturn
+        }
+
+        fun buy(){
+            var body = listOf(
+                "date" to Date().toString(),
+                "totalCost" to calculatePrice().toString(),
+                "client_bill_FK" to Client.currentClient!!.id
+            )
+            Bill.adapter.newBill(body)
+            shoppingCart.forEach {
+                var productBody = listOf(
+                    "quantity" to cartCount[it.id],
+                    "product" to it.id
+                )
+            }
         }
 
     }

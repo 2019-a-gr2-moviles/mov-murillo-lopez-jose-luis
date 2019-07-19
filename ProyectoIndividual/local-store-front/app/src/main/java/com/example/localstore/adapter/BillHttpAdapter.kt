@@ -4,7 +4,9 @@ import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.localstore.model.Bill
 import com.example.localstore.model.Product
+import com.github.kittinunf.fuel.core.Parameters
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.result.Result
 
 class BillHttpAdapter {
@@ -41,6 +43,30 @@ class BillHttpAdapter {
                 }
             }
         return museumList
+    }
+
+    fun newBill(body : Parameters){
+        var currentUrl = "$url/Bills"
+        currentUrl
+            .httpPost(body)
+            .responseString{ request, response, result ->
+                if(result is Result.Failure) {
+                    var ex = result.getException()
+                    Log.i("httpError", "Error: $e")
+                }
+            }
+    }
+
+    fun addProduct(body: Parameters){
+        var currentUrl = "$url/BillProduct"
+        currentUrl
+            .httpPost(body)
+            .responseString{ request, response, result ->
+                if(result is Result.Failure) {
+                    var ex = result.getException()
+                    Log.i("httpError", "Error: $e")
+                }
+            }
     }
 
 }

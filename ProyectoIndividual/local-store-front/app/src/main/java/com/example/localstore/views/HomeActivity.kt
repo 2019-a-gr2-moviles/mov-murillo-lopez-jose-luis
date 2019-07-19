@@ -45,6 +45,9 @@ class HomeActivity : AppCompatActivity(),
                 R.id.item_cart -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container, ShopCartFragment()).addToBackStack( "tag" ).commit()
                 }
+                R.id.item_bills -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, BillsFragment()).addToBackStack( "tag" ).commit()
+                }
             }
             drawer.closeDrawer(GravityCompat.START)
             true

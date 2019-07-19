@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 
 import com.example.localstore.R
 import com.example.localstore.adapter.ProductAdapter
@@ -43,10 +44,15 @@ class ShopCartFragment : Fragment() {
         super.onStart()
         iniciarRecyclerVirew(ShopCart.shoppingCart, this, rv_shop_cart)
         updatePrice()
+        btn_buy.setOnClickListener {
+            ShopCart.buy()
+            Toast.makeText(this.context, "Compra realizada con 'exito", Toast.LENGTH_LONG).show()
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragment_container, ProductsFragment())?.addToBackStack( "tag" )?.commit()
+        }
     }
 
     fun updatePrice(){
-        tv_shop_cart_total.text = "${tv_shop_cart_total.text}${ShopCart.calculatePrice()}"
+        tv_shop_cart_total.text = "Total $ ${ShopCart.calculatePrice()}"
     }
 
     fun iniciarRecyclerVirew (lista : ArrayList<Product>, actividad: ShopCartFragment, recyclerView: RecyclerView){
