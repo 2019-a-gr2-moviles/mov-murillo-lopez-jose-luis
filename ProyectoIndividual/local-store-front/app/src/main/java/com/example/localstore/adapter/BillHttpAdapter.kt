@@ -88,5 +88,28 @@ class BillHttpAdapter : AsyncTask<String, Integer, Unit>() {
         return museumList
     }
 
+    fun newBill(body : Parameters){
+        var currentUrl = "$url/Bills"
+        currentUrl
+            .httpPost(body)
+            .responseString{ request, response, result ->
+                if(result is Result.Failure) {
+                    var ex = result.getException()
+                    Log.i("httpError", "Error: $ex")
+                }
+            }
+    }
+
+    fun addProduct(body: Parameters){
+        var currentUrl = "$url/BillProduct"
+        currentUrl
+            .httpPost(body)
+            .responseString{ request, response, result ->
+                if(result is Result.Failure) {
+                    var ex = result.getException()
+                    Log.i("httpError", "Error: $ex")
+                }
+            }
+    }
 
 }

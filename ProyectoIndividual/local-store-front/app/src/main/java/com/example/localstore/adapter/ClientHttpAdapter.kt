@@ -2,6 +2,7 @@ package com.example.localstore.adapter
 
 import android.util.Log
 import com.beust.klaxon.Klaxon
+import com.example.localstore.model.Bill
 import com.example.localstore.model.Client
 import com.example.localstore.model.Product
 import com.example.localstore.model.User
@@ -17,7 +18,7 @@ class ClientHttpAdapter {
 
     fun getClient(id : Int) : Client? {
         Log.i("testingxd","$id")
-        var currentUrl = "$url/Client?user_person_FK=$id"
+        var currentUrl = "$url/retrieveClient?id=$id"
         Log.i("testingxd","$currentUrl")
         var client : Client? = null
         currentUrl
@@ -30,12 +31,13 @@ class ClientHttpAdapter {
                     }
                     is Result.Success -> {
                         val data = result.get()
+                        Log.i("testingxd","$data")
                         try {
-                            var clientAux = Klaxon().parseArray<Client>(data)
-                            Log.i("testingxd","$data")
-                            if (clientAux != null) {
-                                client = clientAux[0]
+                            var clientAux = Klaxon().parse<Client>(data)
+                           if (clientAux != null) {
+                                client = clientAux
                                 Client.currentClient = client
+                                Bill.allBills = Client.currentClient!!.bills
                             }
                         }catch (e : Exception){
                             Log.i("testingxd", "Error buscando museos: $e")

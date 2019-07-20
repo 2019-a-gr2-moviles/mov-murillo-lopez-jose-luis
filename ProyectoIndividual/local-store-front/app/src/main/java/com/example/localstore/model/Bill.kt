@@ -8,7 +8,8 @@ import kotlin.collections.ArrayList
 class Bill(
     var id : Int,
     var date : String,
-    var totalCost : Double
+    var totalCost : Double,
+    var products : ArrayList<Product>
 )
 {
 

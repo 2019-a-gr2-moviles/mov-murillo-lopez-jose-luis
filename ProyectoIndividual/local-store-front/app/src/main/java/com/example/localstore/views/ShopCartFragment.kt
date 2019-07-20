@@ -46,8 +46,8 @@ class ShopCartFragment : Fragment() {
         updatePrice()
         btn_buy.setOnClickListener {
             ShopCart.buy()
-//            Toast.makeText(this.context, "Compra realizada con 'exito", Toast.LENGTH_LONG).show()
-//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragment_container, HomeFragment())?.addToBackStack( "tag" )?.commit()
+            //Toast.makeText(this.context, "Compra realizada con 'exito", Toast.LENGTH_LONG).show()
+            //activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragment_container, ProductsFragment())?.addToBackStack( "tag" )?.commit()
         }
     }
 
