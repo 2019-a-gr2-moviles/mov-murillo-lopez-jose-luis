@@ -29,5 +29,11 @@ module.exports.routes = {
   'POST /login' : {
     action : 'user/login'
   },
+  'GET /allBills' : {
+    action : 'bill/listBills'
+  },
+  'GET /retrieveClient' : {
+    action : 'client/getClient'
+  }
 
 };
