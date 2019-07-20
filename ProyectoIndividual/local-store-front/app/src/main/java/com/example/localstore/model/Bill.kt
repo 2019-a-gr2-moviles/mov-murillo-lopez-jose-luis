@@ -7,7 +7,7 @@ import kotlin.collections.ArrayList
 
 class Bill(
     var id : Int,
-    var date : Date,
+    var date : String,
     var totalCost : Double,
     var products : ArrayList<Product>
 )

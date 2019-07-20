@@ -21,7 +21,7 @@ class BillAdapter (
         val product = billsList[p1]
         p0.billId.text = "${p0.billId.text} ${product.id}"
         p0.billPrice.text = "$ ${product.totalCost}"
-        p0.billDate.text = product.date.toString()
+        p0.billDate.text = product.date
     }
 
     override fun getItemCount(): Int {
@@ -30,14 +30,14 @@ class BillAdapter (
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
         val itemView = LayoutInflater.from(p0.context).inflate(
-            R.layout.product_layout,
+            R.layout.bill_layout,
             p0,
             false
         )
-        return MyViewHolder(itemView, p1)
+        return MyViewHolder(itemView)
     }
 
-    inner class MyViewHolder (view : View, p1 : Int) : RecyclerView.ViewHolder(view) {
+    inner class MyViewHolder (view : View) : RecyclerView.ViewHolder(view) {
 
         var billId : TextView
         var billDate : TextView
@@ -45,7 +45,7 @@ class BillAdapter (
 
         init{
 
-            billId = view.findViewById(R.id.tv_bill_id)
+            billId = view.findViewById(R.id.tv_id)
             billDate = view.findViewById(R.id.tv_date)
             billPrice = view.findViewById(R.id.tv_price)
 

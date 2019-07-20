@@ -52,7 +52,7 @@ class BillHttpAdapter {
             .responseString{ request, response, result ->
                 if(result is Result.Failure) {
                     var ex = result.getException()
-                    Log.i("httpError", "Error: $e")
+                    Log.i("httpError", "Error: $ex")
                 }
             }
     }
@@ -64,7 +64,7 @@ class BillHttpAdapter {
             .responseString{ request, response, result ->
                 if(result is Result.Failure) {
                     var ex = result.getException()
-                    Log.i("httpError", "Error: $e")
+                    Log.i("httpError", "Error: $ex")
                 }
             }
     }
