@@ -1,0 +1,7 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1563557577527,"updatedAt":1563557577527,"id":1,"quantity":1,"bill_FK":1,"product_FK":1,"_id":1}
+{"createdAt":1563582565684,"updatedAt":1563582565684,"id":2,"quantity":1,"bill_FK":2,"product_FK":3,"_id":2}
+{"createdAt":1563582566007,"updatedAt":1563582566007,"id":3,"quantity":1,"bill_FK":2,"product_FK":5,"_id":3}
+{"createdAt":1563582566377,"updatedAt":1563582566377,"id":4,"quantity":1,"bill_FK":2,"product_FK":7,"_id":4}
+{"createdAt":1563583506047,"updatedAt":1563583506047,"id":5,"quantity":4,"bill_FK":3,"product_FK":6,"_id":5}
+{"createdAt":1563583506146,"updatedAt":1563583506146,"id":6,"quantity":1,"bill_FK":3,"product_FK":1,"_id":6}

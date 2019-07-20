@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1563552194087,"updatedAt":1563552194087,"id":1,"date":"Fri Jul 19 11:03:12 GMT-05:00 2019","totalCost":159,"client_bill_FK":1,"_id":1}
+{"createdAt":1563582564798,"updatedAt":1563582564798,"id":2,"date":"Fri Jul 19 19:29:24 GMT-05:00 2019","totalCost":133,"client_bill_FK":1,"_id":2}
+{"createdAt":1563583505116,"updatedAt":1563583505116,"id":3,"date":"Fri Jul 19 19:45:05 GMT-05:00 2019","totalCost":8,"client_bill_FK":1,"_id":3}

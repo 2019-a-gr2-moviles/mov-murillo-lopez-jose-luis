@@ -1,0 +1,6 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"userName","unique":true,"sparse":false}}
+{"createdAt":1563377345883,"updatedAt":1563377345883,"id":1,"userName":"jose7198","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$BLw/6Ny23wN3sgPh$FeZ4R0AwMM1hGg==$MlhDXXFucgFBGDdZ3hOGnA","user_person_FK":1,"_id":1}
+{"createdAt":1563377427696,"updatedAt":1563377427696,"id":2,"userName":"andreita.l.murillo","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$DKecCo7zsYY8kxlA$/JjxYx8CyA8=$Gerc1RHmryviSBMnOPYWBg","user_person_FK":2,"_id":2}
+{"createdAt":1563475622718,"updatedAt":1563475622718,"id":3,"userName":"jccerezo","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$hMEhLUaV0Jpl00rm$q2d+iaU0$jak/qcBbz74N+fs/UaTqUg","user_person_FK":3,"_id":3}
+{"createdAt":1563489317238,"updatedAt":1563489317238,"id":4,"userName":"Burmamachoy","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$42hloRfFQq77e3Op$xg24rnkml+DHMgE=$sOlCyMKs74lGZIgCHGTGLQ","user_person_FK":4,"_id":4}

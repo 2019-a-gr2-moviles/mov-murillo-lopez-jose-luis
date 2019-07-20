@@ -1,0 +1,5 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1563377130478,"updatedAt":1563377443008,"id":1,"name":"José","lastName":"Murillo","gender":"Masculino","phone":"28234567","user_person_FK":1,"_id":1}
+{"createdAt":1563377233461,"updatedAt":1563377450585,"id":2,"name":"Andrea","lastName":"Murillo","gender":"Femenino","phone":"28234567","user_person_FK":2,"_id":2}
+{"createdAt":1563475619725,"updatedAt":1563475619725,"id":3,"name":"joha","lastName":"cerezo","gender":"Femenino","phone":"0982448380","user_person_FK":3,"_id":3}
+{"createdAt":1563489314303,"updatedAt":1563489314303,"id":4,"name":"Jose I.","lastName":"Garcia","gender":"Masculino","phone":"0996489112","user_person_FK":4,"_id":4}
