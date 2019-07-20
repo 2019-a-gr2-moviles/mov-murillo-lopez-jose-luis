@@ -8,18 +8,19 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 
 import com.example.localstore.R
-import com.example.localstore.adapter.BillAdapter
-import com.example.localstore.adapter.ProductAdapter
+import com.example.localstore.adapter.BillDetailAdapter
+import com.example.localstore.adapter.ShopCartAdapter
 import com.example.localstore.model.Bill
+import com.example.localstore.model.Client
 import com.example.localstore.model.Product
-import kotlinx.android.synthetic.main.fragment_bills.*
-import kotlinx.android.synthetic.main.fragment_shop_cart.*
+import kotlinx.android.synthetic.main.fragment_bill_detail.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,38 +30,54 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [BillsFragment.OnFragmentInteractionListener] interface
+ * [BillDetailFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [BillsFragment.newInstance] factory method to
+ * Use the [BillDetailFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class BillsFragment : Fragment() {
+class BillDetailFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
+    private var idBill : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            idBill = it.getInt("id")
+        }
+        Log.i("fragmentosxd","$idBill")
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        if(arguments != null){
+            idBill = arguments!!.getInt("id")
         }
     }
 
     override fun onStart() {
         super.onStart()
+        Bill.handleProducts(idBill)
         var mDividerItemDecoration = DividerItemDecoration(
-            rv_bill.getContext(),
+            rv_bill_detail.getContext(),
             LinearLayout.VERTICAL
         )
-        rv_bill.addItemDecoration(mDividerItemDecoration)
-        iniciarRecyclerVirew(Bill.allBills, this, rv_bill)
+        rv_bill_detail.addItemDecoration(mDividerItemDecoration)
+        var actualBill = Bill.getBill(idBill)
+        tv_bill_id.text = "${tv_bill_id.text} ${actualBill.id}"
+        tv_client_name.text = "${tv_client_name.text}: ${Client.currentClient!!.name}"
+        tv_client_last_name.text = "${tv_client_last_name.text}: ${Client.currentClient!!.lastName}"
+        tv_client_phone.text = "${tv_client_phone.text}: ${Client.currentClient!!.phone}"
+        tv_bill_date.text = "${tv_bill_date.text}: ${actualBill.date}"
+        tv_total_bill.text = "${tv_total_bill.text} ${actualBill.totalCost}"
+        iniciarRecyclerVirew(Bill.productsList, this, rv_bill_detail)
     }
 
-    fun iniciarRecyclerVirew (lista : ArrayList<Bill>, actividad: BillsFragment, recyclerView: RecyclerView){
-        val adaptadorProducto = BillAdapter(
+    fun iniciarRecyclerVirew (lista : ArrayList<Product>, actividad: BillDetailFragment, recyclerView: RecyclerView){
+        val adaptadorProducto = BillDetailAdapter(
             lista,
             actividad,
             recyclerView
@@ -72,22 +89,12 @@ class BillsFragment : Fragment() {
         adaptadorProducto.notifyDataSetChanged()
     }
 
-    fun openDetail(arguments : Bundle){
-        // 1) Manager
-        val fragmentManager = activity?.supportFragmentManager?.beginTransaction()
-        // 3) Definir la instancia del fragmento
-        val newFragment = BillDetailFragment()
-        newFragment.arguments = arguments
-        // 4) Reemplazamos el fragmento
-        fragmentManager?.replace(R.id.fragment_container, newFragment)?.commit()
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bills, container, false)
+        return inflater.inflate(R.layout.fragment_bill_detail, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -100,7 +107,7 @@ class BillsFragment : Fragment() {
         if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+           // throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
     }
 
@@ -132,12 +139,12 @@ class BillsFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment BillsFragment.
+         * @return A new instance of fragment BillDetailFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            BillsFragment().apply {
+            BillDetailFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

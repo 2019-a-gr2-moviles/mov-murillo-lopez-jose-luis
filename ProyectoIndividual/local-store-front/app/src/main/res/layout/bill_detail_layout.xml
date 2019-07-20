@@ -6,18 +6,13 @@
                                              android:layout_height="wrap_content" android:id="@+id/cl_bill_detail">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_remove"
-            android:id="@+id/iv_remove" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="64dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp"/>
-    <ImageView
             android:layout_width="106dp"
             android:layout_height="106dp" app:srcCompat="@drawable/logo"
             android:id="@+id/iv_product" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintStart_toEndOf="@+id/iv_remove"
-            android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="32dp"/>
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"

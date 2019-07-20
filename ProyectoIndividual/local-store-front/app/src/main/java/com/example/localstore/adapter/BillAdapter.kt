@@ -1,5 +1,6 @@
 package com.example.localstore.adapter
 
+import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -22,6 +23,11 @@ class BillAdapter (
         p0.billId.text = "${p0.billId.text} ${product.id}"
         p0.billPrice.text = "$ ${product.totalCost}"
         p0.billDate.text = product.date
+        p0.layout.setOnClickListener {
+            val arguments = Bundle()
+            arguments.putInt("id", product.id)
+            context.openDetail(arguments)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -42,6 +48,7 @@ class BillAdapter (
         var billId : TextView
         var billDate : TextView
         var billPrice : TextView
+        var layout : ConstraintLayout
 
         init{
 
@@ -49,11 +56,7 @@ class BillAdapter (
             billDate = view.findViewById(R.id.tv_date)
             billPrice = view.findViewById(R.id.tv_price)
 
-            var layout = view.findViewById<ConstraintLayout>(R.id.cl_bills)
-
-            layout.setOnClickListener {
-
-            }
+            layout = view.findViewById(R.id.cl_bills)
 
         }
 

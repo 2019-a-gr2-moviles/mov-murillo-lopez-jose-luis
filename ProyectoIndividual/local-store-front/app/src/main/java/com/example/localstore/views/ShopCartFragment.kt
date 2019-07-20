@@ -5,12 +5,14 @@ import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 
 import com.example.localstore.R
@@ -18,6 +20,7 @@ import com.example.localstore.adapter.ProductAdapter
 import com.example.localstore.adapter.ShopCartAdapter
 import com.example.localstore.model.Product
 import com.example.localstore.model.ShopCart
+import kotlinx.android.synthetic.main.fragment_bill_detail.*
 import kotlinx.android.synthetic.main.fragment_shop_cart.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -42,6 +45,11 @@ class ShopCartFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        var mDividerItemDecoration = DividerItemDecoration(
+            rv_shop_cart.getContext(),
+            LinearLayout.VERTICAL
+        )
+        rv_shop_cart.addItemDecoration(mDividerItemDecoration)
         iniciarRecyclerVirew(ShopCart.shoppingCart, this, rv_shop_cart)
         updatePrice()
         btn_buy.setOnClickListener {

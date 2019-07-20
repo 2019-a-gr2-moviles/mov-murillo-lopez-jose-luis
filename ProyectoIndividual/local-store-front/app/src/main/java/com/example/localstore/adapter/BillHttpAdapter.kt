@@ -51,7 +51,7 @@ class BillHttpAdapter : AsyncTask<String, Integer, Unit>() {
         }
         ShopCart.shoppingCart = arrayListOf()
         ShopCart.cartCount = mutableMapOf<Int, Int>()
-
+        Bill.adapter.getAll()
     }
 
     val url = "http://192.168.0.8:1337"

@@ -17,6 +17,7 @@ import com.example.localstore.R
 import com.example.localstore.adapter.ProductAdapter
 import com.example.localstore.model.Product
 import kotlinx.android.synthetic.main.fragment_products.*
+import kotlinx.android.synthetic.main.fragment_shop_cart.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,6 +45,11 @@ class ProductsFragment : Fragment() {
 //        lista.add(Product(1, "Cereal Minicvvcxcvxcvxcvxcvxcvxcs fresa", "Cereal", "Granola", 5.25))
 //        lista.add(Product(1, "Cereal Minis fresa", "Cereal", "Granola", 5.25))
 //        lista.add(Product(1, "Cereal Minis fresa", "Cereal", "Granola", 5.25))
+        var mDividerItemDecoration = DividerItemDecoration(
+            rv_products.getContext(),
+            LinearLayout.VERTICAL
+        )
+        rv_products.addItemDecoration(mDividerItemDecoration)
         iniciarRecyclerVirew(Product.allProducts, this, rv_products)
     }
 
