@@ -13,6 +13,7 @@ class Bill(
 )
 {
 
+    var productsList : ArrayList<Product> = arrayListOf()
 
     companion object{
         var allBills = arrayListOf<Bill>()

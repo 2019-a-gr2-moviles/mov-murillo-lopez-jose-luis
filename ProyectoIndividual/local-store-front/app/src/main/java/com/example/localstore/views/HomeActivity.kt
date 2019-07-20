@@ -70,8 +70,6 @@ class HomeActivity : AppCompatActivity(),
         }
 
         Product.adapter.getAll()
-        Bill.adapter.getAll()
-
     }
 
     override fun onBackPressed() {
