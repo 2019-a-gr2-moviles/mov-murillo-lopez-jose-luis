@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -27,4 +27,12 @@
             android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.498"
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/btn_manage_food"/>
-</android.support.constraint.ConstraintLayout>
+    <Button
+            android:text="@string/toMaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_maps" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_create_food"
+            app:layout_constraintStart_toStartOf="@+id/btn_create_food"
+            app:layout_constraintEnd_toEndOf="@+id/btn_create_food"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

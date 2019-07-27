@@ -27,4 +27,6 @@
     <string name="updateButton">Update</string>
     <string name="updateFoodSnack">has updated a plate</string>
     <string name="updateIngredientSnack">has updated an ingredient</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="toMaps">Go to map</string>
 </resources>

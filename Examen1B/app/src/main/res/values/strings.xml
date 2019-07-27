@@ -26,4 +26,6 @@
     <string name="insertIngredientSnack">ha insertado un ingrediente.</string>
     <string name="deleteIngredientSnack">ha eliminado un ingrediente.</string>
     <string name="updateIngredientSnack">ha actualizado un ingrediente.</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="toMaps">Ir al mapa</string>
 </resources>
