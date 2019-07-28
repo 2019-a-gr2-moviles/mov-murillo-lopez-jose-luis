@@ -5,85 +5,129 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AddIngredientActivity" android:background="@drawable/food" android:scrollbars="vertical">
+        tools:context=".AddIngredientActivity" android:background="@drawable/food"
+        android:scrollbars="vertical">
 
-    <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="281dp"
-            android:layout_height="57dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp" app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/textInputLayout2">
-
-        <com.google.android.material.textfield.TextInputEditText
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/foodName" android:id="@+id/new_ingredient_name_input" android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="281dp"
-            android:layout_height="57dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.504"
-            android:id="@+id/textInputLayout4" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/new_ingredient_number_input">
+        >
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/ingredientDescription" android:id="@+id/new_ingredient_desc_input"
-                android:singleLine="false"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="281dp"
-            android:layout_height="57dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.494" android:id="@+id/textInputLayout6">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="281dp"
+                    android:layout_height="57dp"
+                    android:id="@+id/textInputLayout2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="24dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="65dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="65dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/ingredientType" android:id="@+id/new_ingredient_type" android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <EditText
-            android:layout_width="281dp"
-            android:layout_height="57dp"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/new_ingredient_number_input"
-            android:hint="@string/quantity"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.508"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" app:layout_constraintEnd_toEndOf="parent"/>
-    <CheckBox
-            android:text="@string/optional"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_optional_check"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="24dp"/>
-    <Button
-            android:text="@string/saveButton"
-            android:layout_width="125dp"
-            android:layout_height="78dp"
-            android:id="@+id/btn_update_ingredient" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="52dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.402"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/new_cool_check"/>
-    <CheckBox
-            android:text="@string/ingredientCool"
-            android:layout_width="178dp"
-            android:layout_height="35dp"
-            android:id="@+id/new_cool_check" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="24dp"/>
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/foodName" android:id="@+id/new_ingredient_name_input"
+                        android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="281dp"
+                    android:layout_height="57dp"
+                    android:id="@+id/textInputLayout4"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="66dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="64dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ingredientDescription" android:id="@+id/new_ingredient_desc_input"
+                        android:singleLine="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="281dp"
+                    android:layout_height="57dp"
+                    android:id="@+id/textInputLayout6"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="64dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ingredientType" android:id="@+id/new_ingredient_type"
+                        android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                    android:layout_width="281dp"
+                    android:layout_height="57dp"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/new_ingredient_number_input"
+                    android:hint="@string/quantity"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="64dp" android:layout_marginStart="64dp"/>
+            <CheckBox
+                    android:text="@string/optional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_optional_check"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/new_ingredient_number_input"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"/>
+            <CheckBox
+                    android:text="@string/ingredientCool"
+                    android:layout_width="178dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/new_cool_check"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="32dp" android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/new_ingredient_number_input"/>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="281dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textInputLayout3"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/new_optional_check"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="65dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="65dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lat" android:id="@+id/new_i_lat" android:singleLine="true"
+                        android:numeric="signed|decimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="281dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textInputLayout5"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="65dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="65dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lon" android:id="@+id/new_i_lng" android:singleLine="true"
+                        android:numeric="signed|decimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                    android:text="@string/saveButton"
+                    android:layout_width="125dp"
+                    android:layout_height="78dp"
+                    android:id="@+id/btn_update_ingredient"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="143dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="143dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

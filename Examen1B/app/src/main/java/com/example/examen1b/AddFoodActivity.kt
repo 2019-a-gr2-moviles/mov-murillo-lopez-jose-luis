@@ -18,12 +18,14 @@ class AddFoodActivity : AppCompatActivity() {
     }
 
     fun insertFood(){
-        val foodName = new_food_name_input.text.toString()
-        val foodDescription = new_food_desc_input.text.toString()
-        val foodCountry = new_food_country_input.text.toString()
-        val foodNumber = new_food_number_input.text.toString().toInt()
-        val foodHotSpicy = new_optional_check.isChecked
-        Food.foodList.add(Food(foodName,foodDescription,foodCountry,foodNumber,foodHotSpicy))
+        var body = listOf(
+            "foodName" to new_food_name_input.text.toString(),
+            "foodDescription" to new_food_desc_input.text.toString(),
+            "nacionality" to new_food_country_input.text.toString(),
+            "numberPeople" to new_food_number_input.text.toString().toInt(),
+            "hotSpicy" to new_optional_check.isChecked
+        )
+        Food.add(body)
         //goToMainFood()
     }
 

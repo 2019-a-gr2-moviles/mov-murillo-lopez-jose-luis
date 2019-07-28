@@ -14,13 +14,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Food.initializeList()
         btn_enter.setOnClickListener {
             logIn()
         }
     }
 
     fun logIn(){
-        User.name = user_input.text.toString()
+        User.newUser(user_input.text.toString())
         val intent = Intent(
             this,
             FoodActivity::class.java

@@ -28,4 +28,6 @@
     <string name="updateIngredientSnack">ha actualizado un ingrediente.</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="toMaps">Ir al mapa</string>
+    <string name="lat">Latitud</string>
+    <string name="lon">Longitud</string>
 </resources>

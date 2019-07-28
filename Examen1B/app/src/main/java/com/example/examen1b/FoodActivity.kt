@@ -19,15 +19,16 @@ class FoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
-        val n = intent.getIntExtra("forSnack",0)
-        Log.i("snack", "$n")
-        when (n) {
-            1 -> {
-                Snackbar.make(food_layout, "${User.name} ${getString(R.string.deleteFoodSnack)}", Snackbar.LENGTH_LONG).show()
-                Log.i("snack","insert")
-            }
-            0 -> Log.i("snack","no")
-        }
+//        val n = intent.getIntExtra("forSnack",0)
+//        Log.i("snack", "$n")
+//        when (n) {
+//            1 -> {
+//                Snackbar.make(food_layout, "${User.name} ${getString(R.string.deleteFoodSnack)}", Snackbar.LENGTH_LONG).show()
+//                Log.i("snack","insert")
+//            }
+//            0 -> Log.i("snack","no")
+//        }
+
 
         btn_manage_food.setOnClickListener {
             goToManagement()

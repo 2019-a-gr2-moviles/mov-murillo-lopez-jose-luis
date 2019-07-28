@@ -25,7 +25,7 @@ class ManageIngredientsActivity : AppCompatActivity() {
 
     fun initList(foodID : Int){
         namesList.clear()
-        val ingredients = Ingredient.searchByFood(Food.foodList[foodID])
+        val ingredients = Food.foodList[foodID].ingredients
         ingredients.forEach {
             namesList.add(it.ingredientName)
         }

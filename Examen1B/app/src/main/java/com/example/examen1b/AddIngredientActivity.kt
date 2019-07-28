@@ -18,13 +18,18 @@ class AddIngredientActivity : AppCompatActivity() {
     }
 
     fun addIngredient(n : Int){
-        val ingredientName = new_ingredient_name_input.text.toString()
-        val quantity = new_ingredient_number_input.text.toString().toInt()
-        val ingredientDescription = new_ingredient_desc_input.text.toString()
-        val ingredientType = new_ingredient_type.text.toString()
-        val cool = new_cool_check.isChecked
-        val optional = new_optional_check.isChecked
-        Ingredient.ingredientsList.add(Ingredient(ingredientName,quantity,ingredientDescription,optional,ingredientType,cool,Food.foodList[n]))
+        val ingredient = listOf(
+            "ingredientName" to new_ingredient_name_input.text.toString(),
+            "quantity" to new_ingredient_number_input.text.toString().toInt(),
+            "prepDescription" to new_ingredient_desc_input.text.toString(),
+            "ingredientType" to new_ingredient_type.text.toString(),
+            "coolNeeded" to new_cool_check.isChecked,
+            "optional" to new_optional_check.isChecked,
+            "latitude" to new_i_lat.text.toString(),
+            "longitude" to new_i_lng.text.toString(),
+            "food_FK" to Food.foodList[n].id
+        )
+        Ingredient.add(ingredient, n)
     }
 
 }

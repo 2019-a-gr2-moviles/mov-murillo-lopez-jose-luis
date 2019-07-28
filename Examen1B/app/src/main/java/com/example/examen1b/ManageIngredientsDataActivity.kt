@@ -24,26 +24,34 @@ class ManageIngredientsDataActivity : AppCompatActivity() {
     }
 
     fun deleteIngredient(ingredientID: Int, foodId :Int){
-        Ingredient.ingredientsList.remove(Ingredient.searchByFood(Food.foodList[foodId])[ingredientID])
+      //  Ingredient.ingredientsList.remove(Ingredient.searchByFood(Food.foodList[foodId])[ingredientID])
+        Ingredient.delete(Food.foodList[foodId].ingredients[ingredientID].id)
     }
 
     fun updateIngredient(ingredientID: Int, foodId: Int){
-        val ingredientName = ingredient_name_input.text.toString()
-        val quantity = ingredient_number_input.text.toString().toInt()
-        val ingredientDescription = ingredient_desc_input.text.toString()
-        val ingredientType = ingredient_type.text.toString()
-        val cool = cool_check.isChecked
-        val optional = optional_check.isChecked
-        Ingredient.searchByFood(Food.foodList[foodId])[ingredientID].editIngredient(ingredientName, quantity, ingredientDescription, optional , ingredientType, cool)
+        val body = listOf(
+            "ingredientName" to ingredient_name_input.text.toString(),
+            "quantity" to ingredient_number_input.text.toString().toInt(),
+            "prepDescription" to ingredient_desc_input.text.toString(),
+            "ingredientType" to ingredient_type.text.toString(),
+            "cool" to cool_check.isChecked,
+            "optional" to optional_check.isChecked,
+            "latitude" to input_latitude.text.toString(),
+            "longitude" to input_longitude.text.toString()
+        )
+        Ingredient.update(body, Food.foodList[foodId].ingredients[ingredientID].id)
+       // Ingredient.searchByFood(Food.foodList[foodId])[ingredientID].editIngredient(ingredientName, quantity, ingredientDescription, optional , ingredientType, cool)
     }
 
     fun fillPage(ingredientID : Int, foodID: Int){
-        val ingredient = Ingredient.searchByFood(Food.foodList[foodID])[ingredientID]
+        val ingredient = Food.foodList[foodID].ingredients[ingredientID]
         ingredient_name_input.setText(ingredient.ingredientName)
         ingredient_desc_input.setText(ingredient.prepDescription)
         ingredient_type.setText(ingredient.ingredientType)
         ingredient_number_input.setText(""+ingredient.quantity)
         optional_check.isChecked = ingredient.optional
         cool_check.isChecked = ingredient.coolNeeded
+        input_latitude.setText(ingredient.latitude)
+        input_longitude.setText(ingredient.longitude)
     }
 }
