@@ -1,0 +1,10 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1564243405457,"updatedAt":1564243405457,"id":1,"foodName":"Encebollado","foodDescription":"Sopa de cebolla","nacionality":"Ecuador","numberPeople":1,"hotSpicy":false,"_id":1}
+{"createdAt":1564326702598,"updatedAt":1564331530966,"id":2,"foodName":"Pie floater","foodDescription":"Pastel de carne flotante","nacionality":"Australia","numberPeople":2,"hotSpicy":true,"_id":2}
+{"foodName":"Fetuccini","foodDescription":"Fideos con pollo","nacionality":"Ecuatoriano","numberPeople":3,"hotSpicy":false,"createdAt":1564345432578,"updatedAt":1564345432578,"id":3,"_id":3}
+{"$$deleted":true,"_id":3}
+{"foodName":"Fetuccini","foodDescription":"Fideos con pollo","nacionality":"Ecuatoriano","numberPeople":3,"hotSpicy":true,"createdAt":1564345432578,"updatedAt":1564345474518,"id":3,"_id":3}
+{"$$deleted":true,"_id":3}
+{"foodName":"Fetuccini","foodDescription":"Fideos con pollo","nacionality":"Ecuatoriano","numberPeople":3,"hotSpicy":false,"createdAt":1564345432578,"updatedAt":1564345489370,"id":3,"_id":3}
+{"$$deleted":true,"_id":3}
+{"foodName":"Fetuccini","foodDescription":"Fideos con pollo","nacionality":"Ecuatoriano","numberPeople":3,"hotSpicy":true,"createdAt":1564345432578,"updatedAt":1564345493899,"id":3,"_id":3}

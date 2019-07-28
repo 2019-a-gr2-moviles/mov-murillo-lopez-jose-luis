@@ -1,0 +1,31 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1564243580803,"updatedAt":1564243580803,"id":1,"ingredientName":"Yuca","quantity":2,"prepDescription":"Haga hervir el agua y ponga las yucas","optional":false,"ingredientType":"Tubérculo","coolNeeded":false,"food_FK":1,"latitude":"","longitude":"","_id":1}
+{"$$deleted":true,"_id":1}
+{"createdAt":1564243580803,"updatedAt":1564332362939,"id":1,"ingredientName":"Yuca","quantity":2,"prepDescription":"Haga hervir el agua y ponga las yucas","optional":false,"ingredientType":"Tubérculo","coolNeeded":false,"food_FK":1,"latitude":"-0.210359","longitude":"-78.488979","_id":1}
+{"ingredientName":"Tomate","quantity":2,"prepDescription":"Prepare until refrito","ingredientType":"Vegetal","coolNeeded":true,"optional":false,"latitude":"-0.209409","longitude":"-78.489562","food_FK":1,"createdAt":1564333594817,"updatedAt":1564333594817,"id":2,"_id":2}
+{"ingredientName":"Ceboola","quantity":5,"prepDescription":"Picar las ceboolas","ingredientType":"Vegetal","coolNeeded":false,"optional":false,"latitude":"-0.209335","longitude":"-78.491833","food_FK":1,"createdAt":1564334388756,"updatedAt":1564334388756,"id":3,"_id":3}
+{"ingredientName":"assa","quantity":2255,"prepDescription":"saas","ingredientType":"sasasa","coolNeeded":true,"optional":false,"latitude":"gg","longitude":"ggg","food_FK":1,"createdAt":1564334855015,"updatedAt":1564334855015,"id":4,"_id":4}
+{"$$deleted":true,"_id":1}
+{"createdAt":1564243580803,"updatedAt":1564341737137,"id":1,"ingredientName":"Yuca","quantity":2,"prepDescription":"Haga hervir el agua y ponga las yucas","optional":false,"ingredientType":"Tubérculo","coolNeeded":false,"food_FK":1,"latitude":"-0.210359","longitude":"-78.488979","_id":1}
+{"$$deleted":true,"_id":4}
+{"ingredientName":"dsadsa","quantity":232,"prepDescription":"adssad","ingredientType":"sadsad","coolNeeded":false,"optional":true,"latitude":"-0.3333","longitude":"34.54453","food_FK":1,"createdAt":1564342279479,"updatedAt":1564342279479,"id":5,"_id":5}
+{"$$deleted":true,"_id":5}
+{"ingredientName":"dsadsa","quantity":232,"prepDescription":"adssad","ingredientType":"sadsad","coolNeeded":false,"optional":true,"latitude":"222","longitude":"222","food_FK":1,"createdAt":1564342279479,"updatedAt":1564342351168,"id":5,"cool":"false","_id":5}
+{"$$deleted":true,"_id":5}
+{"ingredientName":"asdfgjkt533","quantity":232,"prepDescription":"adssad","ingredientType":"sadsad","coolNeeded":false,"optional":true,"latitude":"","longitude":"","food_FK":1,"createdAt":1564342279479,"updatedAt":1564342369877,"id":5,"cool":"false","_id":5}
+{"$$deleted":true,"_id":5}
+{"$$deleted":true,"_id":3}
+{"ingredientName":"Cebola","quantity":5,"prepDescription":"Picar las ceboolas","ingredientType":"Vegetal","coolNeeded":false,"optional":false,"latitude":"-0.209335","longitude":"-78.491833","food_FK":1,"createdAt":1564334388756,"updatedAt":1564342433879,"id":3,"cool":"false","_id":3}
+{"$$deleted":true,"_id":3}
+{"ingredientName":"Cebolla","quantity":5,"prepDescription":"Picar las ceboolas","ingredientType":"Vegetal","coolNeeded":false,"optional":false,"latitude":"-0.209335","longitude":"-78.491833","food_FK":1,"createdAt":1564334388756,"updatedAt":1564342450694,"id":3,"cool":"false","_id":3}
+{"ingredientName":"hghghhf","quantity":333,"prepDescription":"hghgffgh","ingredientType":"gfgfgf","coolNeeded":false,"optional":true,"latitude":"333","longitude":"333","food_FK":1,"createdAt":1564342480657,"updatedAt":1564342480657,"id":6,"_id":6}
+{"$$deleted":true,"_id":6}
+{"$$deleted":true,"_id":3}
+{"ingredientName":"Cebolla","quantity":50,"prepDescription":"Picar las ceboolas","ingredientType":"Vegetal","coolNeeded":false,"optional":false,"latitude":"-0.209335","longitude":"-78.491833","food_FK":1,"createdAt":1564334388756,"updatedAt":1564344651586,"id":3,"cool":"false","_id":3}
+{"ingredientName":"Fideo","quantity":3,"prepDescription":"Hervir","ingredientType":"Pasta","coolNeeded":false,"optional":false,"latitude":"-0.196608","longitude":"-78.501616","food_FK":3,"createdAt":1564345560174,"updatedAt":1564345560174,"id":7,"_id":7}
+{"$$deleted":true,"_id":7}
+{"ingredientName":"Fideo","quantity":5,"prepDescription":"Hervir","ingredientType":"Pasta","coolNeeded":false,"optional":false,"latitude":"-0.196608","longitude":"-78.501616","food_FK":3,"createdAt":1564345560174,"updatedAt":1564345575665,"id":7,"cool":"false","_id":7}
+{"ingredientName":"Pollo","quantity":2,"prepDescription":"Cocinar","ingredientType":"Carne","coolNeeded":true,"optional":false,"latitude":"-0.195192","longitude":"-78.507152","food_FK":3,"createdAt":1564345628198,"updatedAt":1564345628198,"id":8,"_id":8}
+{"ingredientName":"Crema de leche","quantity":1,"prepDescription":"Cocinar junto all pollo","ingredientType":"Lacteo","coolNeeded":true,"optional":false,"latitude":"-0.189614","longitude":"-78.487387","food_FK":3,"createdAt":1564345819026,"updatedAt":1564345819026,"id":9,"_id":9}
+{"ingredientName":"Carne","quantity":2,"prepDescription":"Picar","ingredientType":"Carne","coolNeeded":true,"optional":false,"latitude":"-0.209029","longitude":"-78.497763","food_FK":2,"createdAt":1564346008193,"updatedAt":1564346008193,"id":10,"_id":10}
+{"ingredientName":"Huevo","quantity":1,"prepDescription":"Pintar last pesta contact huevo","ingredientType":"Huevo","coolNeeded":false,"optional":true,"latitude":"-0.215928","longitude":"-78.502731","food_FK":2,"createdAt":1564346222956,"updatedAt":1564346222956,"id":11,"_id":11}
